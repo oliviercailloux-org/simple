@@ -8,11 +8,13 @@ import com.google.common.collect.ImmutableList;
 
 public class Copier {
 
-  public static void copy(List<? extends Collection<String>> rows) {
+  public static void copy(List<Collection<String>> rows) {
     Collection<String> row0 = rows.get(0);
     ImmutableList.copyOf(row0);
 
     Stream<Collection<String>> str = rows.stream().<Collection<String>>map(r -> r);
     Stream<ImmutableList<String>> str2 = str.map(r -> ImmutableList.<String>copyof(r));
+
+    List.of(row0);
   }
 }
