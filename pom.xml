@@ -6,12 +6,10 @@
 	<groupId>io.github.oliviercailloux</groupId>
 	<artifactId>simple</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>17</maven.compiler.release>
 	</properties>
-
 	<build>
 		<plugins>
 			<!-- JUnit 5 requires Surefire version 2.22.0 or higher. Maven currently features 
@@ -24,13 +22,12 @@
 				since 3.6 (see maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html#release), whereas the 
 				version 3.1 is currently provided by default (see maven.apache.org/ref/3.6.3/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging 
 				or https://maven.apache.org/ref/3-LATEST/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging) -->
-			 <plugin>
-			 	<artifactId>maven-compiler-plugin</artifactId>
-			 	<version>3.10.1</version>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
 			</plugin>
 		</plugins>
 	</build>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -42,7 +39,12 @@
 			<artifactId>guava</artifactId>
 			<version>31.1-jre</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>20.0.1</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
@@ -50,7 +52,6 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
