@@ -6,11 +6,10 @@ import java.util.stream.Stream;
 
 import com.google.common.collect.ImmutableList;
 
-public class Gui<T> {
-	private T id;
+public class Copier {
 
-  public void copy(List<? extends List<String>> rows) {
-    List<String> row0 = rows.get(0);
+  public static void copy(List<? extends Collection<String>> rows) {
+    Collection<String> row0 = rows.get(0);
     ImmutableList.copyOf(row0);
 
     Stream<Collection<String>> str = rows.stream().<Collection<String>>map(r -> r);
