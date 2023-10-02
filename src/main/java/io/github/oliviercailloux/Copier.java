@@ -13,7 +13,7 @@ public class Copier {
     ImmutableList.copyOf(row0);
 
     Stream<Collection<String>> str = rows.stream().<Collection<String>>map(r -> r);
-    Stream<ImmutableList<String>> str2 = str.map(r -> ImmutableList.<String>copyof(r));
+    Stream<ImmutableList<String>> str2 = str.map(r -> ImmutableList.<String>copyOf(r));
 
     List.of(row0);
   }
